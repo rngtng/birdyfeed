@@ -1,13 +1,16 @@
-set :application, "birdyfeed"
-
-set :use_sudo, false
-set :rvm_type, :user
 
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+
 require 'rvm/capistrano'
 require 'bundler/capistrano'
 
-set :rvm_ruby_string, 'ruby-1.9.2-rc2'
+set :application, "birdyfeed"
+
+set :use_sudo, false
+set :user, 'ssh-21560'
+
+set :rvm_type, :user
+set :rvm_ruby_string, "ruby-1.9.2-rc2@#{application}"
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
@@ -19,9 +22,9 @@ set :deploy_to, "/kunden/warteschlange.de/produktiv/rails/#{application}"
 set :scm, :git
 set :repository, "git://github.com/rngtng/#{application}.git"
 set :branch, "master"
+
 set :deploy_via, :remote_cache
 
-set :user, 'ssh-21560'
 set :ssh_options, :forward_agent => true
 
 role :app, "#{application}.warteschlange.de"
