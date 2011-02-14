@@ -28,3 +28,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+# Access to Carddav
+gem 'net_dav'
+gem 'curb'
+
