@@ -5,6 +5,19 @@ class AccountsController < ApplicationController
   end
 
   def show
+    @account = Account.find_by_id(params[:id])
+    @title = "Birthdays"
+
+    @feed_items = @account.events.recent
+    @updated = @feed_items.first.created_at
+
+    respond_to do |format|
+      format.html
+      format.atom { render :layout => false }
+    end
+  end
+
+  def import
     @account = Account.find(params[:id])
     @account.import
 

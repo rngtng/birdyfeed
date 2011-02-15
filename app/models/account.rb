@@ -2,14 +2,14 @@ require 'net/dav'
 
 class Account < ActiveRecord::Base
 
-  has_many :feed_items
+  has_many :events
 
   def import
-    self.feed_items.destroy_all
+    self.events.destroy_all
 
     self.client.start do |connection|
        connection.find('.') do |item|
-         self.feed_items.create(:raw_card => item.content)
+         self.events.create(:raw_card => item.content)
        end
     end
   end

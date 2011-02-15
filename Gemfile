@@ -16,3 +16,5 @@ gem 'curb'
 
 # To Parse vcards
 gem 'vcard'
+
+gem 'event-calendar', :require => 'event_calendar'

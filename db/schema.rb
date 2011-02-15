@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110214150238) do
+ActiveRecord::Schema.define(:version => 20110215205343) do
 
   create_table "accounts", :force => true do |t|
     t.string   "url"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(:version => 20110214150238) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.integer  "account_id"
+    t.string   "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.boolean  "all_day",    :default => false
+    t.string   "color"
+    t.text     "raw_card"
   end
 
   create_table "feed_items", :force => true do |t|

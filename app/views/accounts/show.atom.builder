@@ -6,7 +6,7 @@ atom_feed do |feed|
    @feed_items.each do |item|
     feed.entry(item) do |entry|
 
-      entry.title(item.title)
+      entry.title(item.name)
       entry.content(item.summary, :type => "html")
 
     end
