@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
   validates_presence_of :account_id
   validates_presence_of :start_at
 
-  scope :recent, { :conditions => "start_at <= NOW() ", :limit => 20, :order => "start_at DESC" }
+  scope :recent, { :conditions => "start_at <= NOW() ", :limit => 30, :order => "start_at DESC" }
 
   def raw_card=(card_string)
     write_attribute(:raw_card, card_string)
