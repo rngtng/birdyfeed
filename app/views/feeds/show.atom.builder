@@ -7,7 +7,6 @@ atom_feed do |feed|
     feed.entry(item) do |entry|
 
       entry.title(item.title)
-   #   entry.summary("item.summary", :type => "html")
       entry.content(item.summary, :type => "html")
 
     end

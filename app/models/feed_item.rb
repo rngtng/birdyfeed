@@ -33,13 +33,14 @@ class FeedItem < ActiveRecord::Base
   end
 
   def created_at
-    Time.parse("#{Time.now.year}-#{date.month}-#{date.day} 12:00")
+    Time.parse("#{Time.now.year}-#{date.month}-#{date.day}")
   end
-
+  alias_method :birthday_at, :created_at
+  
   private
   def set_name_and_date
     if card['bday']
-      self.date = Time.parse(card['bday'])
+      self.date = Time.parse("#{card['bday']} 12:00")
       self.name = card['fn']
     end
   end
