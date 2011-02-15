@@ -3,4 +3,5 @@ db/*.sqlite3
 log/*.log
 tmp/
 .rvmrc
-config/database.yml.bundle\n
+config/database.yml
+.bundle

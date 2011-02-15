@@ -33,7 +33,7 @@ class FeedItem < ActiveRecord::Base
   end
 
   def created_at
-    Time.parse("#{Time.now.year}-#{date.month}-#{date.day}") 
+    Time.parse("#{Time.now.year}-#{date.month}-#{date.day} 12:00")
   end
 
   private
