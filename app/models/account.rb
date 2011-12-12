@@ -15,8 +15,8 @@ class Account < ActiveRecord::Base
   end
 
   def client
-    @client ||= Net::DAV.new( self.url )
-    @client.credentials(self.username, self.password)
-    @client
+    @client ||= Net::DAV.new(self.url).tap do |client|
+      client.credentials(self.username, self.password)
+    end
   end
 end
