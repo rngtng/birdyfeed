@@ -2,6 +2,6 @@
 db/*.sqlite3
 log/*.log
 tmp/
-.rvmrc
 config/database.yml
 .bundle
+.rvmrc

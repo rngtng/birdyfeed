@@ -2,11 +2,13 @@
 
 Get daily your friends birthdays via a Feed
 
-
-# "https://davical.warteschlange.de:8081/caldav.php/travel/addressbook/"
-# "https://davical.warteschlange.de:8081/caldav.php/tobi/addressbook/"
-
-
 # check
-
 http://dev.elevationblog.com/2009/7/23/event-calendar-rails-plugin
+
+# TODO
+extend to a global vcard & ical backupstore 
+
+* create an entry for each remote item
+* get basics:
+  vcard: name, tel, email, birthday, address, notes, picture?
+  ical: date, title, calendar
