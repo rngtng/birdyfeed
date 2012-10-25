@@ -21,25 +21,45 @@ gem 'curb'
 
 # To Parse vcards
 gem 'vcard'
-
 gem 'event-calendar', :require => 'event_calendar'
 
-
-group :development do
-  gem 'foreman'
-
-  # Deploy with Capistrano
-  gem 'capistrano'
-  gem 'heroku'
-end
 
 group :development, :test do
   gem 'rspec-rails'
   # gem 'debugger'
 end
 
+group :development do
+  gem 'foreman'
+end
+
 group :test do
-  # Pretty printed test output
-  # gem 'turn', '0.8.2', :require => false
-  gem 'factory_girl_rails' # problems with bazooka
+  # fixtures
+  # gem 'faker'
+  gem 'factory_girl_rails'
+  # gem 'timecop'
+
+  # Integration
+  # gem 'capybara'
+  # gem 'database_cleaner'
+
+  gem 'shoulda-matchers' # e.g. for "respond_with"
+  # gem 'diffy'
+
+  # Productivity
+  # gem 'livereload'
+  # gem 'guard-rspec' # https://github.com/guard/guard
+  # gem 'watchr'
+  # gem 'spork', '~> 1.0rc'
+
+  # Coverage
+  # gem 'simplecov'
+
+  gem 'vcr'
+
+  # Check on simple scrurity flaws:
+  # gem 'brakeman'
+
+  # Speed up AR Test?!
+  # gem 'nulldb'
 end

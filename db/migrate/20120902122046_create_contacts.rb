@@ -1,12 +1,12 @@
 class CreateContacts < ActiveRecord::Migration
   def change
     create_table :contacts do |t|
+      t.references :account
 
       t.string :first_name
       t.string :last_name
       t.string :nick_name
       t.string :company
-
 
       t.string :tel_1
       t.string :tel_2
@@ -16,30 +16,18 @@ class CreateContacts < ActiveRecord::Migration
 
       t.string :birthday
 
+      t.string :street
+      t.string :plz
+      t.string :city
+      t.string :country
 
-      t. :street
-      t. :plz
-      t. :city
-      t. :country
+      t.text :social #:skype, :twitter, :icq, :jabber, :msn, :facebook, :soundcloud
+      t.text :picture
 
-
-
-      t.string :skype
-      t.text :social
+      t.text :notes
 
       t.string :tags
-
-      # :skype
-      #
-      # t.string :twitter
-      #t.string :icq
-      #t.string :jabber
-      #t.string :irc
-      #t.string :soundcloud
-
-      t.string :picture
-
-      t.string :notes
+      t.string :source
 
       t.timestamps
     end
