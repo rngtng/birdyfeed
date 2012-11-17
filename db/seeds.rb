@@ -2,6 +2,7 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 
+## Davical
 # Travel
 Account.create(
   :url => "http://davical.warteschlange.de:8081/caldav.php/travel/addressbook/",
@@ -12,6 +13,14 @@ Account.create(
 # Tobi
 Account.create(
   :url => "http://davical.warteschlange.de:8081/caldav.php/tobi/addressbook/",
+  :username => 'tobi',
+  :password => 'snd'
+)
+
+## Sabredav
+# Tobi
+Account.create(
+  :url => "https://dav.warteschlange.de:8443",
   :username => 'tobi',
   :password => 'snd'
 )
