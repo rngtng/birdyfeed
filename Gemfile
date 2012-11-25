@@ -21,12 +21,16 @@ gem 'curb'
 
 # To Parse vcards
 gem 'vcard'
-gem 'event-calendar', :require => 'event_calendar'
+# gem 'event-calendar', :require => 'event_calendar'
+
+
+group :development do
+  gem 'debugger'
+end
 
 
 group :development, :test do
   gem 'rspec-rails'
-  # gem 'debugger'
 end
 
 group :development do

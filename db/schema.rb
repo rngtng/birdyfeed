@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120902122046) do
 
   create_table "accounts", :force => true do |t|
+    t.string   "type"
     t.string   "url"
     t.string   "username"
     t.string   "password"
@@ -22,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20120902122046) do
   end
 
   create_table "contacts", :force => true do |t|
+    t.integer  "contact_account_id"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "nick_name"
@@ -40,18 +42,21 @@ ActiveRecord::Schema.define(:version => 20120902122046) do
     t.text     "notes"
     t.string   "tags"
     t.string   "source"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "raw_card"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "events", :force => true do |t|
-    t.integer  "account_id"
+    t.integer  "event_account_id"
     t.string   "name"
     t.datetime "start_at"
     t.datetime "end_at"
-    t.boolean  "all_day",    :default => false
+    t.boolean  "all_day",          :default => false
     t.string   "color"
     t.text     "raw_card"
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
   end
 
 end

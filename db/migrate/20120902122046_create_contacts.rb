@@ -1,7 +1,7 @@
 class CreateContacts < ActiveRecord::Migration
   def change
     create_table :contacts do |t|
-      t.references :account
+      t.references :contact_account
 
       t.string :first_name
       t.string :last_name
@@ -28,6 +28,8 @@ class CreateContacts < ActiveRecord::Migration
 
       t.string :tags
       t.string :source
+
+      t.text :raw_card
 
       t.timestamps
     end

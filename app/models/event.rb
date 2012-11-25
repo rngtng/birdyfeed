@@ -1,8 +1,9 @@
 class Event < ActiveRecord::Base
-  has_event_calendar \
-    :use_all_day => true, 
-    :use_javascript => false,
-    :link_to_day_action => true
+  # has_event_calendar {
+  #   :use_all_day        => true,
+  #   :use_javascript     => false,
+  #   :link_to_day_action => true,
+  # }
 
   belongs_to :account
 

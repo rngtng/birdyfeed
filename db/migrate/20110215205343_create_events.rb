@@ -1,7 +1,7 @@
 class CreateEvents < ActiveRecord::Migration
   def change
     create_table :events do |t|
-      t.references :account
+      t.references :event_account
 
       t.string :name
       t.datetime :start_at
@@ -11,6 +11,8 @@ class CreateEvents < ActiveRecord::Migration
       t.string :color
 
       t.text :raw_card
+
+      t.timestamps
     end
   end
 end

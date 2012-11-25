@@ -4,14 +4,14 @@
 
 ## Davical
 # Travel
-Account.create(
+ContactAccount.create(
   :url => "http://davical.warteschlange.de:8081/caldav.php/travel/addressbook/",
   :username => 'tobi',
   :password => 'snd'
 )
 
 # Tobi
-Account.create(
+ContactAccount.create(
   :url => "http://davical.warteschlange.de:8081/caldav.php/tobi/addressbook/",
   :username => 'tobi',
   :password => 'snd'
@@ -19,7 +19,7 @@ Account.create(
 
 ## Sabredav
 # Tobi
-Account.create(
+ContactAccount.create(
   :url => "https://dav.warteschlange.de:8443",
   :username => 'tobi',
   :password => 'snd'
