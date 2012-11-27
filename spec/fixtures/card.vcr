@@ -2,6 +2,8 @@ BEGIN:VCARD
 VERSION:3.0
 N:Maier;Christoph;;;
 FN:Christoph Maier
+NICKNAME:nille
+ORG:AvocadoStore.de;
 EMAIL;type=INTERNET;type=HOME;type=pref:masdyer_chtoph@hotmail.com
 TEL;type=HOME;type=pref:+49 (89) 2143437292
 TEL;type=WORK:+49 (89) 414563446

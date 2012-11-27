@@ -10,6 +10,17 @@ describe Contact do
 
     it { expect { subject }.to change { account.contacts.count } }
 
+    its(:first_name) { should == "Christoph" }
+    its(:last_name)  { should == "Maier" }
+    its(:nick_name)  { should == "nille" }
+    its(:company)    { should == "AvocadoStore.de" }
+    its(:birthday)   { should == "1980-06-04" }
+    #its(:notes)      { should == "" }
+    its(:tags)       { should == "My Contacts" }
+
+    its(:tel_1)     { should == "+491735332818" }
+    its(:tel_2)     { should == "+4989414563446" }
+
     its(:msn)      { should == "mayer_chrsfah@hotmail.com" }
     its(:jabber)   { should == "elthl@jabber.fsinf.de"  }
     its(:icq)      { should == "108890559"  }

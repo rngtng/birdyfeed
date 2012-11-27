@@ -5,15 +5,16 @@ class Contact < ActiveRecord::Base
   #picture blob
 
   def raw_card=(card_string)
+    Phoner::Phone.default_country_code = '49'
+
     write_attribute(:raw_card, card_string)
     card = Vpim::Vcard.decode(card_string.force_encoding('ASCII-8BIT')).first
 
     print self.first_name = card.name.given
     puts self.last_name  = card.name.family
-
     self.nick_name  = card.nickname
-    self.company    = card.org
-    self.birthday   = card.birthday
+    self.company    = Array(card.org).first
+    self.birthday   = card.birthday.to_s
     self.notes      = card.note
     self.tags       = Array(card.categories).join ","
 
@@ -26,18 +27,29 @@ class Contact < ActiveRecord::Base
     self.facebook   = socials[:facebook]
     # self.soundcloud  = socials[:skype]
 
-    card.telephones.clone.tap do |telephones|
-      if tel = telephones.shift
-        self.tel_1 = tel
+
+    telephones = card.telephones.inject({}) do |hash, telephone|
+      key = telephone.location.sort.join("_").downcase
+      if tel = Phoner::Phone.parse(telephone.to_s)
+        key = "mobile" if tel.is_mobile?
+        hash[key] = tel.to_s
+      end
+      hash
+    end
+
+    telephones.each do |key, value|
+      if !self.tel_1 && %w(mobile cell iphone).include?(key)
+        self.tel_1 = telephones.delete(key)
       end
 
-      if tel = telephones.shift
-        self.tel_2 = tel
+      if !self.tel_2 && %w(home work).include?(key)
+        self.tel_2 = telephones.delete(key)
       end
-      if telephones.size > 0
-        puts "#{telephones.size} more telephones found"
-        # debugger
-      end
+    end
+
+    if telephones.size > 0
+      puts "#{telephones.size} more telephones found: #{telephones.inspect}"
+      # debugger
     end
 
     card.emails.clone.tap do |emails|
@@ -46,6 +58,7 @@ class Contact < ActiveRecord::Base
       end
       puts "#{emails.size} more emails found" if emails.size > 0
     end
+    # TODO where to put other emails
 
     card.urls.clone.map(&:uri).tap do |urls|
       if url = urls.shift
@@ -67,8 +80,6 @@ class Contact < ActiveRecord::Base
       end
       puts "#{photos.size} more photos found" if photos.size > 0
     end
-
-    # self.country    = card.email  # TODO where to put other emails
   end
 
 

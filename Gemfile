@@ -13,6 +13,10 @@ gem 'mysql2'
 #   gem 'uglifier', '>= 1.0.3'
 # end
 
+gem 'phone', {
+  :git => "git://github.com/wmoxam/phone.git"
+}
+
 gem 'jquery-rails'
 
 # Access to Carddav
