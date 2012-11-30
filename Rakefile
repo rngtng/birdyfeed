@@ -5,3 +5,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 Birdyfeed::Application.load_tasks
+
+desc "reset"
+task :reset => ['db:drop', 'db:create', 'db:migrate', 'db:seed', 'db:test:prepare']

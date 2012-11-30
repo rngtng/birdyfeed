@@ -20,7 +20,9 @@ gem 'phone', {
 gem 'jquery-rails'
 
 # Access to Carddav
-gem 'net_dav'
+gem 'net_dav', {
+  :git => "git://github.com/devrandom/net_dav.git"
+}
 gem 'curb'
 
 # To Parse vcards

@@ -2,6 +2,7 @@ class CreateContacts < ActiveRecord::Migration
   def change
     create_table :contacts do |t|
       t.references :contact_account
+      t.string :uid
 
       t.string :first_name
       t.string :last_name
@@ -33,5 +34,8 @@ class CreateContacts < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :contacts, [:uid], :unique => true
+
   end
 end

@@ -1,0 +1,6 @@
+#!/usr/bin/env rails runner
+
+
+account = ContactAccount.find 2
+account.password = ARGV[0]
+account.import(10000000)

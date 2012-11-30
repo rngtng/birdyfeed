@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20120902122046) do
 
   create_table "contacts", :force => true do |t|
     t.integer  "contact_account_id"
+    t.string   "uid"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "nick_name"
@@ -46,6 +47,8 @@ ActiveRecord::Schema.define(:version => 20120902122046) do
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
+
+  add_index "contacts", ["uid"], :name => "index_contacts_on_uid", :unique => true
 
   create_table "events", :force => true do |t|
     t.integer  "event_account_id"

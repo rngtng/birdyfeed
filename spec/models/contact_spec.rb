@@ -5,10 +5,18 @@ describe Contact do
   let(:raw_card) { File.read("spec/fixtures/card.vcr") }
 
   describe "#create" do
-    let(:contact) { account.contacts.create(:raw_card => raw_card) }
-    subject { contact }
+    subject { account.contacts.create(:uid => "asd") }
 
     it { expect { subject }.to change { account.contacts.count } }
+  end
+
+  describe "#import" do
+    let(:contact) { build(:contact)  }
+    subject { contact }
+
+    before do
+      contact.import(raw_card.to_s)
+    end
 
     its(:first_name) { should == "Christoph" }
     its(:last_name)  { should == "Maier" }

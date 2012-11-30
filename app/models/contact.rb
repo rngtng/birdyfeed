@@ -1,17 +1,16 @@
 class Contact < ActiveRecord::Base
   # attr_accessible :title, :body
 
+  validates :uid, :presence => true, :uniqueness => true
+
   store :social, :accessors => [:skype, :twitter, :icq, :jabber, :msn, :facebook, :soundcloud]
   #picture blob
 
-  def raw_card=(card_string)
-    Phoner::Phone.default_country_code = '49'
-
-    write_attribute(:raw_card, card_string)
-    card = Vpim::Vcard.decode(card_string.force_encoding('ASCII-8BIT')).first
-
+  def import(card_string)
+    card = Vcard.decode(card_string.force_encoding('ASCII-8BIT')).first
+debugger
     print self.first_name = card.name.given
-    puts self.last_name  = card.name.family
+    puts self.last_name   = card.name.family
     self.nick_name  = card.nickname
     self.company    = Array(card.org).first
     self.birthday   = card.birthday.to_s
