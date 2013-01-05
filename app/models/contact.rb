@@ -7,13 +7,16 @@ class Contact < ActiveRecord::Base
   #picture blob
 
   def import(card_string)
-    card = Vcard.decode(card_string.force_encoding('ASCII-8BIT')).first
-debugger
+    card = Vcard::Vcard.decode(card_string.force_encoding('ASCII-8BIT')).first
+
     print self.first_name = card.name.given
     puts self.last_name   = card.name.family
     self.nick_name  = card.nickname
     self.company    = Array(card.org).first
+    debugger
+
     self.birthday   = card.birthday.to_s
+
     self.notes      = card.note
     self.tags       = Array(card.categories).join ","
 
@@ -29,7 +32,7 @@ debugger
 
     telephones = card.telephones.inject({}) do |hash, telephone|
       key = telephone.location.sort.join("_").downcase
-      if tel = Phoner::Phone.parse(telephone.to_s)
+      if tel = Phonie::Phone.parse(telephone.to_s)
         key = "mobile" if tel.is_mobile?
         hash[key] = tel.to_s
       end

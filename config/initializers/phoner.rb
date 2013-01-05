@@ -1,1 +1,1 @@
-Phoner::Phone.default_country_code = '49'
+Phonie::Phone.default_country_code = '49'
