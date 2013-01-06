@@ -12,6 +12,18 @@ describe Contact do
 
   describe "#import" do
     let(:contact) { build(:contact)  }
+
+    let(:expected_notes) { <<-EOF
+Heikes ExFreund
+Chemiker uni
+
+WLAN:
+183ea34ff714d
+
+31383345413334464637313444
+EOF
+    }
+
     subject { contact }
 
     before do
@@ -23,16 +35,24 @@ describe Contact do
     its(:nick_name)  { should == "nille" }
     its(:company)    { should == "AvocadoStore.de" }
     its(:birthday)   { should == "1980-06-04" }
-    #its(:notes)      { should == "" }
+    its(:notes)      { should == expected_notes.strip }
     its(:tags)       { should == "My Contacts" }
 
     its(:tel_1)     { should == "+491735332818" }
-    its(:tel_2)     { should == "+4989414563446" }
+    its(:tel_2)     { should == "+4989214343729" }
+    its(:email)     { should == "masdyer_chtoph@hotmail.com" }
 
     its(:msn)      { should == "mayer_chrsfah@hotmail.com" }
     its(:jabber)   { should == "elthl@jabber.fsinf.de"  }
     its(:icq)      { should == "108890559"  }
     its(:skype)    { should == "chrisma4"  }
     its(:facebook) { should == "http\\\://www.facebook.com/profile.php?id=1836684010"  }
+    its(:additional_data)    { should == {
+       :tel_malcious => {"cell"=>"+49 (89) 1234567890"},
+       :tel          => {"work"=>"+4989414563446"},
+       :email        => {"work"=>"chtoph@hotmail.com"},
+       :url          => {"1"=>"http://nillesnotizen.wordpress.com/"},
+      }
+    }
   end
 end

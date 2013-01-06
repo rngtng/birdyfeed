@@ -5,18 +5,22 @@ FN:Christoph Maier
 NICKNAME:nille
 ORG:AvocadoStore.de;
 EMAIL;type=INTERNET;type=HOME;type=pref:masdyer_chtoph@hotmail.com
-TEL;type=HOME;type=pref:+49 (89) 2143437292
+TEL;type=HOME;type=pref:+49 (89) 214343729
+TEL;type=CELL:+49 (89) 1234567890
 TEL;type=WORK:+49 (89) 414563446
 item1.TEL:chrisma4
 item1.X-ABLabel:skype
 TEL;type=IPHONE:+491735332818
 item2.ADR;type=HOME;type=pref:;;Einsteinstraße 119;München;;81675;
 item2.X-ABADR:de
+EMAIL;type=INTERNET;type=WORK:chtoph@hotmail.com
 NOTE:Heikes ExFreund\nChemiker uni\n\nWLAN:\n183ea34ff714d\n\n31383345413334464637313444
 BDAY;value=date:1980-06-04
 X-ICQ;type=HOME;type=pref:108890559
 item3.URL;type=pref:http\://www.facebook.com/profile.php?id=1836684010
 item3.X-ABLabel:Facebook
+item4.URL;type=pref:http://nillesnotizen.wordpress.com/
+item4.X-ABLabel:_$!<HomePage>!$_
 PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAAAQABAAD/4gPsSUNDX1BST0ZJTEUA
  AQEAAAPcYXBwbAIAAABtbnRyUkdCIFhZWiAH1wAFAAwAFgAEADthY3NwQVBQTAAAAAAAAAAAAA
  AAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWFwcGzL2RPjskq4vzXn1adQznNzAAAAAAAAAAAA

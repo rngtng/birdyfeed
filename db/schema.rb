@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120902122046) do
+ActiveRecord::Schema.define(:version => 20130106190553) do
 
   create_table "accounts", :force => true do |t|
     t.string   "type"
@@ -29,21 +29,19 @@ ActiveRecord::Schema.define(:version => 20120902122046) do
     t.string   "last_name"
     t.string   "nick_name"
     t.string   "company"
+    t.string   "birthday"
     t.string   "tel_1"
     t.string   "tel_2"
     t.string   "email"
     t.string   "url"
-    t.string   "birthday"
     t.string   "street"
     t.string   "plz"
     t.string   "city"
     t.string   "country"
     t.text     "social"
-    t.text     "picture"
-    t.text     "notes"
+    t.text     "additional_data"
     t.string   "tags"
-    t.string   "source"
-    t.text     "raw_card"
+    t.text     "notes"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -60,6 +58,20 @@ ActiveRecord::Schema.define(:version => 20120902122046) do
     t.text     "raw_card"
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
+  end
+
+  create_table "original_vcards", :force => true do |t|
+    t.integer  "contact_id"
+    t.text     "data",       :limit => 16777215
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
+
+  create_table "pictures", :force => true do |t|
+    t.integer  "contact_id"
+    t.binary   "data",       :limit => 16777215
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
 end
