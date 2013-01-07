@@ -4,8 +4,6 @@ class ContactAccount < Account
   has_many :contacts
 
   def import(max_items)
-    self.contacts.destroy_all
-
     items = 0
     self.client.start do |connection|
       connection.find('.') do |item|

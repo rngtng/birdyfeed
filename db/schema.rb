@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20130106190553) do
   create_table "pictures", :force => true do |t|
     t.integer  "contact_id"
     t.binary   "data",       :limit => 16777215
+    t.string   "format"
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
   end

@@ -42,16 +42,18 @@ EOF
     its(:tel_2)     { should == "+4989214343729" }
     its(:email)     { should == "masdyer_chtoph@hotmail.com" }
 
+    its(:url)      { should == "http://anotherone.com/" }
+
     its(:msn)      { should == "mayer_chrsfah@hotmail.com" }
     its(:jabber)   { should == "elthl@jabber.fsinf.de"  }
     its(:icq)      { should == "108890559"  }
     its(:skype)    { should == "chrisma4"  }
-    its(:facebook) { should == "http\\\://www.facebook.com/profile.php?id=1836684010"  }
+    its(:facebook) { should == "1836684010"  }
     its(:additional_data)    { should == {
        :tel_malcious => {"cell"=>"+49 (89) 1234567890"},
        :tel          => {"work"=>"+4989414563446"},
        :email        => {"work"=>"chtoph@hotmail.com"},
-       :url          => {"1"=>"http://nillesnotizen.wordpress.com/"},
+       :url          => {"0"=>"http://nillesnotizen.wordpress.com/"},
       }
     }
   end

@@ -1,0 +1,7 @@
+#!/usr/bin/env rails runner
+
+account = ContactAccount.find 3
+account.contacts[0..10].each do |card|
+  File.open(card.uid, 'w') { |f| f.print card.vcard.to_s }
+end
+

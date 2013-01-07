@@ -3,6 +3,7 @@ class CreatePictures < ActiveRecord::Migration
     create_table :pictures do |t|
       t.references :contact
       t.binary :data, :limit => 500.kilobytes
+      t.string :format
 
       t.timestamps
     end
