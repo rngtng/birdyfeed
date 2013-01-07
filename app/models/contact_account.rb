@@ -9,7 +9,9 @@ class ContactAccount < Account
     items = 0
     self.client.start do |connection|
       connection.find('.') do |item|
-        import_item(File.basename(item.url.to_s), item.content, item.properties.creationdate, item.properties.lastmodificationdate)
+        updated_at = item.properties.lastmodificationdate
+        created_at = item.properties.creationdate rescue updated_at
+        import_item(File.basename(item.url.to_s), item.content, created_at, updated_at)
         items += 1
         return if items > max_items
       end

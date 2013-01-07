@@ -1,6 +1,6 @@
 #!/usr/bin/env rails runner
 
-account = ContactAccount.find 2
+account = ContactAccount.find 3
 account.password = ARGV[0]
-account.import(1000)
+account.import(5000)
 # account.import_item(Time.now.to_i, File.read("12EAD940-848D-48BA-B1FB-17BC9D854E8D-ABSPlugin.vcf"))

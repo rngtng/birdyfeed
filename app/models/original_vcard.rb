@@ -1,5 +1,5 @@
 class OriginalVcard < ActiveRecord::Base
-  MAX_SIZE = 100.kilobytes
+  MAX_SIZE = 500.kilobytes
 
   attr_accessible :data
 

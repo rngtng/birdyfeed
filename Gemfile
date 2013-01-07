@@ -22,7 +22,8 @@ gem 'jquery-rails'
 
 # Access to Carddav
 gem 'net_dav', {
-  :git => "git://github.com/devrandom/net_dav.git" # to get access to 'properties'
+  # :git => "git://github.com/devrandom/net_dav.git" # to get access to 'properties'
+  :git => "git://github.com/rngtng/net_dav.git" # to get access to 'properties'
 }
 gem 'curb'
 

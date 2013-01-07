@@ -1,5 +1,5 @@
 class Picture < ActiveRecord::Base
-  MAX_SIZE = 100.kilobytes
+  MAX_SIZE = 300.kilobytes
 
   attr_accessible :data
 
