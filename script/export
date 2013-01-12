@@ -1,7 +1,12 @@
 #!/usr/bin/env rails runner
 
 account = ContactAccount.find 3
-account.contacts[0..10].each do |card|
-  File.open(card.uid, 'w') { |f| f.print card.vcard.to_s }
+account2 = ContactAccount.find 4
+account2.password = ARGV[0]
+
+File.open("cards.vcr", 'w') do |f|
+  account.contacts[0..10].each do |card|
+    account2.export("#{card.new_uid}.vcf", card.vcard.to_s)
+  end
 end
 

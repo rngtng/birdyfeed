@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'date'
 
 class Contact < ActiveRecord::Base
@@ -56,7 +58,7 @@ class Contact < ActiveRecord::Base
           self.additional_data[:tel][key] = value.to_s
         end
       else
-        next if key.empty?
+        next if key.blank?
         (self.additional_data[:tel_malcious] ||= {}).tap do |hash|
           hash[key] = telephone.to_s
         end
@@ -88,7 +90,7 @@ class Contact < ActiveRecord::Base
       end
     end
 
-    card.addresses do |address, key|
+    card.addresses.each do |address, key|
       if !self.street && !self.plz && !self.city && !self.country
         self.street  = address.street
         self.plz     = address.postalcode
@@ -108,11 +110,22 @@ class Contact < ActiveRecord::Base
 
     card.photos.each do |photo|
       self.pictures.build(:data => photo).tap do |picture|
-        if (format = photo.format) && !format.empty?
+        if (format = photo.format) && !format.blank?
           picture.format = format
         end
       end
     end
+  end
+
+  def new_uid
+    ("%04d #{first_name} #{last_name}" % id).split(" ").join("-").downcase.gsub(/[äöüÄÖÜ]/, {
+      "ä" => "ae",
+      "ö" => "oe",
+      "ü" => "ue",
+      "Ä" => "Ae",
+      "Ö" => "Oe",
+      "Ü" => "Ue",
+    })
   end
 
   def vcard
@@ -120,14 +133,19 @@ class Contact < ActiveRecord::Base
       card.add_name do |name|
         name.given  = first_name
         name.family = last_name
+        name.suffix = id.to_s
       end
       card.nickname = nick_name if nick_name
       card.org      = company   if company
 
-      card.add_field ::Vcard::DirectoryInfo::Field.create( "CATEGORIES", tags ) if !tags.empty?
+      # debugger
+
+      tags = "Test"
+
+      card.add_field ::Vcard::DirectoryInfo::Field.create( "CATEGORIES", tags ) if !tags.blank?
       card.add_note(notes)      if notes
 
-      card.birthday = Date.parse(birthday) if !birthday.empty?
+      card.birthday = Date.parse(birthday) if !birthday.blank?
 
       card.add_tel(tel_1)   { |t| t.location = 'mobile'; t.preferred = true } if tel_1
       card.add_tel(tel_2)   { |t| t.location = 'home';   t.preferred = true } if tel_2
@@ -150,7 +168,7 @@ class Contact < ActiveRecord::Base
       end
 
       card.add_field ::Vcard::DirectoryInfo::Field.create( "REV", updated_at )
-      card.add_field ::Vcard::DirectoryInfo::Field.create( "UID", uid )
+      card.add_field ::Vcard::DirectoryInfo::Field.create( "UID", new_uid )
     end
   end
 

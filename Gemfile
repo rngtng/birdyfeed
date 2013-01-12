@@ -13,6 +13,10 @@ gem 'mysql2'
 #   gem 'uglifier', '>= 1.0.3'
 # end
 
+gem 'dav4rack_ext', {
+  :path => '/Users/tobi/Projects/ruby/dav4rack_ext'
+}
+
 gem 'phonie'
 # , {
 #   :git => "git://github.com/wmoxam/phone.git"
@@ -22,13 +26,16 @@ gem 'jquery-rails'
 
 # Access to Carddav
 gem 'net_dav', {
+  :path => "/Users/tobi/Projects/ruby/net_dav",
   # :git => "git://github.com/devrandom/net_dav.git" # to get access to 'properties'
-  :git => "git://github.com/rngtng/net_dav.git" # to get access to 'properties'
+  # :git => "git://github.com/rngtng/net_dav.git" # to get access to 'properties'
 }
 gem 'curb'
 
 # To Parse vcards
 gem 'vcard'
+
+gem 'vcard_parser'
 # gem 'event-calendar', :require => 'event_calendar'
 
 
