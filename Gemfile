@@ -43,6 +43,10 @@ gem 'vcard_parser'
 # gem 'event-calendar', :require => 'event_calendar'
 
 
+gem 'warden'
+gem 'rails_warden'
+gem 'devise'
+
 group :development, :test do
   gem 'rspec-rails'
 end
