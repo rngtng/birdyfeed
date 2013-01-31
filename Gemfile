@@ -17,6 +17,10 @@ gem 'dav4rack_ext', {
   :path => '/Users/tobi/Projects/ruby/dav4rack_ext'
 }
 
+gem 'railsdav', {
+  :path => '/Users/tobi/Projects/ruby/railsdav'
+}
+
 gem 'phonie'
 # , {
 #   :git => "git://github.com/wmoxam/phone.git"

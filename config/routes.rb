@@ -1,3 +1,5 @@
+require "railsdav/routing_extensions"
+
 module ActionDispatch::Routing
   class Mapper
 
@@ -43,14 +45,6 @@ module ActionDispatch::Routing
 
       self
     end
-
-    def options(*args, &block)
-      map_method(:options, *args, &block)
-    end
-
-    def propfind(*args, &block)
-      map_method(:propfind, *args, &block)
-    end
   end
 end
 
@@ -62,11 +56,16 @@ Birdyfeed::Application.routes.draw do
   # ## END MacOSX 10.6 hacks
 
   namespace "card_dav", :path => '' do
+    match '/' => 'principals#propfind', :via => :propfind # better redirect!
+    match '/' => 'principals#options', :via => :options   # better redirect!
+
+    webdav_resources :principals, :format => false, :except => [:new, :edit]
+
     # card_dav_resources :principals
 
-    card_dav_resources :book do
-      card_dav_resources :contacts
-    end
+    # card_dav_resources :books do
+    #   card_dav_resources :contacts
+    # end
   end
 
   # root :to => DAV4Rack::Carddav.app
