@@ -56,8 +56,7 @@ Birdyfeed::Application.routes.draw do
   # ## END MacOSX 10.6 hacks
 
   namespace "card_dav", :path => '' do
-    match '/' => 'principals#propfind', :via => :propfind # better redirect!
-    match '/' => 'principals#options', :via => :options   # better redirect!
+    match '/' => redirect('/principals/'), :via => [:propfind, :options]
 
     webdav_resources :principals, :format => false, :except => [:new, :edit]
 

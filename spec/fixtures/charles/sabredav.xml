@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE charles-session SYSTEM "http://www.charlesproxy.com/dtd/charles-session-1_0.dtd">
+
+<charles-session>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/.well-known/carddav" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:42.890+11:00" startTimeMillis="1359212202890" requestTime="2013-01-27T01:56:42.919+11:00" requestTimeMillis="1359212202919" responseTime="2013-01-27T01:56:43.005+11:00" responseTimeMillis="1359212203005" endTime="2013-01-27T01:56:43.005+11:00" endTimeMillis="1359212203005">
+<request headers="308" body="181" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:current-user-principal/>
+    <A:principal-URL/>
+    <A:resourcetype/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="404" headers="130" body="3" /></transaction>
+<transaction status="Failed" method="CONNECT" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" port="8843" actualPort="8843" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:42.892+11:00" startTimeMillis="1359212202892" endTime="2013-01-27T01:56:42.895+11:00" endTimeMillis="1359212202895">
+<request headers="172" body="0" />
+<response headers="0" body="0" /></transaction>
+<transaction status="Failed" method="CONNECT" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" port="8443" actualPort="8443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:42.893+11:00" startTimeMillis="1359212202893" endTime="2013-01-27T01:56:42.901+11:00" endTimeMillis="1359212202901">
+<request headers="172" body="0" />
+<response headers="0" body="0" /></transaction>
+<transaction status="Failed" method="CONNECT" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" port="8843" actualPort="8843" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:42.907+11:00" startTimeMillis="1359212202907" endTime="2013-01-27T01:56:42.908+11:00" endTimeMillis="1359212202908">
+<request headers="172" body="0" />
+<response headers="0" body="0" /></transaction>
+<transaction status="Failed" method="CONNECT" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" port="8443" actualPort="8443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:42.908+11:00" startTimeMillis="1359212202908" endTime="2013-01-27T01:56:42.909+11:00" endTimeMillis="1359212202909">
+<request headers="172" body="0" />
+<response headers="0" body="0" /></transaction>
+<transaction status="Failed" method="CONNECT" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" port="8843" actualPort="8843" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:42.916+11:00" startTimeMillis="1359212202916" endTime="2013-01-27T01:56:42.918+11:00" endTimeMillis="1359212202918">
+<request headers="172" body="0" />
+<response headers="0" body="0" /></transaction>
+<transaction status="Failed" method="CONNECT" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" port="8443" actualPort="8443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:42.917+11:00" startTimeMillis="1359212202917" endTime="2013-01-27T01:56:42.918+11:00" endTimeMillis="1359212202918">
+<request headers="172" body="0" />
+<response headers="0" body="0" /></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.009+11:00" startTimeMillis="1359212203009" requestTime="2013-01-27T01:56:43.037+11:00" requestTimeMillis="1359212203037" responseTime="2013-01-27T01:56:43.060+11:00" responseTimeMillis="1359212203060" endTime="2013-01-27T01:56:43.061+11:00" endTimeMillis="1359212203061">
+<request headers="289" body="181" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:current-user-principal/>
+    <A:principal-URL/>
+    <A:resourcetype/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="155" body="636" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/">
+  <D:response>
+    <D:href>/</D:href>
+    <D:propstat>
+      <D:prop>            <D:current-user-principal>
+              <D:href>/</D:href>
+            </D:current-user-principal>
+            <D:principal-URL>
+              <D:href>/</D:href>
+            </D:principal-URL>
+            <D:resourcetype>
+              <D:collection/>
+              <D:principal/>
+            </D:resourcetype>
+</D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction>
+<transaction status="Complete" method="OPTIONS" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.062+11:00" startTimeMillis="1359212203062" requestTime="2013-01-27T01:56:43.064+11:00" requestTimeMillis="1359212203064" responseTime="2013-01-27T01:56:43.068+11:00" responseTimeMillis="1359212203068" endTime="2013-01-27T01:56:43.069+11:00" endTimeMillis="1359212203069">
+<request headers="242" body="0" />
+<response status="200" headers="342" body="29" mime-type="text/html" contentEncoding="gzip">
+<body><![CDATA[]]></body></response></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.072+11:00" startTimeMillis="1359212203072" requestTime="2013-01-27T01:56:43.100+11:00" requestTimeMillis="1359212203100" responseTime="2013-01-27T01:56:43.109+11:00" responseTimeMillis="1359212203109" endTime="2013-01-27T01:56:43.110+11:00" endTimeMillis="1359212203110">
+<request headers="289" body="439" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <B:addressbook-home-set xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <B:directory-gateway xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <A:displayname/>
+    <C:email-address-set xmlns:C="http://calendarserver.org/ns/"/>
+    <A:principal-collection-set/>
+    <A:principal-URL/>
+    <A:resource-id/>
+    <A:supported-report-set/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="155" body="980" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/">
+  <D:response>
+    <D:href>/</D:href>
+    <D:propstat>
+      <D:prop>              <C:addressbook-home-set>
+                <D:href>/books/</D:href>
+              </C:addressbook-home-set>
+<D:displayname>User Principal Resource</D:displayname>            <D:principal-URL>
+              <D:href>/</D:href>
+            </D:principal-URL>
+</D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop>
+        <C:directory-gateway></C:directory-gateway>
+        <APPLE1:email-address-set></APPLE1:email-address-set>
+        <D:principal-collection-set></D:principal-collection-set>
+        <D:resource-id></D:resource-id>
+        <D:supported-report-set></D:supported-report-set>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction>
+<transaction status="Complete" method="OPTIONS" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.112+11:00" startTimeMillis="1359212203112" requestTime="2013-01-27T01:56:43.114+11:00" requestTimeMillis="1359212203114" responseTime="2013-01-27T01:56:43.117+11:00" responseTimeMillis="1359212203117" endTime="2013-01-27T01:56:43.117+11:00" endTimeMillis="1359212203117">
+<request headers="242" body="0" />
+<response status="200" headers="342" body="29" mime-type="text/html" contentEncoding="gzip">
+<body><![CDATA[]]></body></response></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/books/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.120+11:00" startTimeMillis="1359212203120" requestTime="2013-01-27T01:56:43.122+11:00" requestTimeMillis="1359212203122" responseTime="2013-01-27T01:56:43.168+11:00" responseTimeMillis="1359212203168" endTime="2013-01-27T01:56:43.169+11:00" endTimeMillis="1359212203169">
+<request headers="295" body="717" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:add-member/>
+    <D:bulk-requests xmlns:D="http://me.com/_namespace/"/>
+    <A:current-user-privilege-set/>
+    <A:displayname/>
+    <B:max-image-size xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <B:max-resource-size xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <C:me-card xmlns:C="http://calendarserver.org/ns/"/>
+    <A:owner/>
+    <C:push-transports xmlns:C="http://calendarserver.org/ns/"/>
+    <C:pushkey xmlns:C="http://calendarserver.org/ns/"/>
+    <A:quota-available-bytes/>
+    <A:quota-used-bytes/>
+    <A:resource-id/>
+    <A:resourcetype/>
+    <A:supported-report-set/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="156" body="4433" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/" xmlns:unknown12902="http://me.com/_namespace/">
+  <D:response>
+    <D:href>/books/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:add-member></D:add-member>
+        <unknown12902:bulk-requests></unknown12902:bulk-requests>
+        <C:max-image-size></C:max-image-size>
+        <C:max-resource-size></C:max-resource-size>
+        <APPLE1:me-card></APPLE1:me-card>
+        <APPLE1:push-transports></APPLE1:push-transports>
+        <APPLE1:pushkey></APPLE1:pushkey>
+        <D:quota-available-bytes></D:quota-available-bytes>
+        <D:quota-used-bytes></D:quota-used-bytes>
+        <D:resource-id></D:resource-id>
+        <D:supported-report-set></D:supported-report-set>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop>            <D:current-user-privilege-set>
+              <D:privilege><D:read/></D:privilege><D:privilege><D:read-acl/></D:privilege><D:privilege><D:read-current-user-privilege-set/></D:privilege>
+            </D:current-user-privilege-set>
+<D:displayname>books</D:displayname>            <D:owner>
+              <D:href>/</D:href>
+            </D:owner>
+<D:resourcetype><D:collection/></D:resourcetype></D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>/books/default/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:add-member></D:add-member>
+        <unknown12902:bulk-requests></unknown12902:bulk-requests>
+        <C:max-image-size></C:max-image-size>
+        <APPLE1:me-card></APPLE1:me-card>
+        <APPLE1:push-transports></APPLE1:push-transports>
+        <APPLE1:pushkey></APPLE1:pushkey>
+        <D:quota-available-bytes></D:quota-available-bytes>
+        <D:quota-used-bytes></D:quota-used-bytes>
+        <D:resource-id></D:resource-id>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop><D:current-user-privilege-set><D:privilege><D:read/></D:privilege><D:privilege><D:write/></D:privilege><D:privilege><D:write-properties/></D:privilege><D:privilege><D:write-content/></D:privilege><D:privilege><D:read-acl/></D:privilege><D:privilege><D:read-current-user-privilege-set/></D:privilege></D:current-user-privilege-set><D:displayname>test 1</D:displayname><C:max-resource-size></C:max-resource-size>            <D:owner>
+              <D:href>/</D:href>
+            </D:owner>
+            <D:resourcetype>
+              <D:collection/>
+              <C:addressbook/>
+            </D:resourcetype>
+<D:supported-report-set><D:report><C:addressbook-multiget/></D:report></D:supported-report-set></D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>/books/second_one/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:add-member></D:add-member>
+        <unknown12902:bulk-requests></unknown12902:bulk-requests>
+        <C:max-image-size></C:max-image-size>
+        <APPLE1:me-card></APPLE1:me-card>
+        <APPLE1:push-transports></APPLE1:push-transports>
+        <APPLE1:pushkey></APPLE1:pushkey>
+        <D:quota-available-bytes></D:quota-available-bytes>
+        <D:quota-used-bytes></D:quota-used-bytes>
+        <D:resource-id></D:resource-id>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop><D:current-user-privilege-set><D:privilege><D:read/></D:privilege><D:privilege><D:write/></D:privilege><D:privilege><D:write-properties/></D:privilege><D:privilege><D:write-content/></D:privilege><D:privilege><D:read-acl/></D:privilege><D:privilege><D:read-current-user-privilege-set/></D:privilege></D:current-user-privilege-set><D:displayname>test 2</D:displayname><C:max-resource-size></C:max-resource-size>            <D:owner>
+              <D:href>/</D:href>
+            </D:owner>
+            <D:resourcetype>
+              <D:collection/>
+              <C:addressbook/>
+            </D:resourcetype>
+<D:supported-report-set><D:report><C:addressbook-multiget/></D:report></D:supported-report-set></D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction>
+<transaction status="Complete" method="OPTIONS" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.531+11:00" startTimeMillis="1359212203531" requestTime="2013-01-27T01:56:43.533+11:00" requestTimeMillis="1359212203533" responseTime="2013-01-27T01:56:43.538+11:00" responseTimeMillis="1359212203538" endTime="2013-01-27T01:56:43.539+11:00" endTimeMillis="1359212203539">
+<request headers="242" body="0" />
+<response status="200" headers="342" body="29" mime-type="text/html" contentEncoding="gzip">
+<body><![CDATA[]]></body></response></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.546+11:00" startTimeMillis="1359212203546" requestTime="2013-01-27T01:56:43.588+11:00" requestTimeMillis="1359212203588" responseTime="2013-01-27T01:56:43.603+11:00" responseTimeMillis="1359212203603" endTime="2013-01-27T01:56:43.604+11:00" endTimeMillis="1359212203604">
+<request headers="289" body="439" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <B:addressbook-home-set xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <B:directory-gateway xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <A:displayname/>
+    <C:email-address-set xmlns:C="http://calendarserver.org/ns/"/>
+    <A:principal-collection-set/>
+    <A:principal-URL/>
+    <A:resource-id/>
+    <A:supported-report-set/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="155" body="980" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/">
+  <D:response>
+    <D:href>/</D:href>
+    <D:propstat>
+      <D:prop>              <C:addressbook-home-set>
+                <D:href>/books/</D:href>
+              </C:addressbook-home-set>
+<D:displayname>User Principal Resource</D:displayname>            <D:principal-URL>
+              <D:href>/</D:href>
+            </D:principal-URL>
+</D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop>
+        <C:directory-gateway></C:directory-gateway>
+        <APPLE1:email-address-set></APPLE1:email-address-set>
+        <D:principal-collection-set></D:principal-collection-set>
+        <D:resource-id></D:resource-id>
+        <D:supported-report-set></D:supported-report-set>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction>
+<transaction status="Complete" method="OPTIONS" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.612+11:00" startTimeMillis="1359212203612" requestTime="2013-01-27T01:56:43.614+11:00" requestTimeMillis="1359212203614" responseTime="2013-01-27T01:56:43.623+11:00" responseTimeMillis="1359212203623" endTime="2013-01-27T01:56:43.624+11:00" endTimeMillis="1359212203624">
+<request headers="242" body="0" />
+<response status="200" headers="342" body="29" mime-type="text/html" contentEncoding="gzip">
+<body><![CDATA[]]></body></response></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/books/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.632+11:00" startTimeMillis="1359212203632" requestTime="2013-01-27T01:56:43.692+11:00" requestTimeMillis="1359212203692" responseTime="2013-01-27T01:56:43.738+11:00" responseTimeMillis="1359212203738" endTime="2013-01-27T01:56:43.739+11:00" endTimeMillis="1359212203739">
+<request headers="295" body="717" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:add-member/>
+    <D:bulk-requests xmlns:D="http://me.com/_namespace/"/>
+    <A:current-user-privilege-set/>
+    <A:displayname/>
+    <B:max-image-size xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <B:max-resource-size xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <C:me-card xmlns:C="http://calendarserver.org/ns/"/>
+    <A:owner/>
+    <C:push-transports xmlns:C="http://calendarserver.org/ns/"/>
+    <C:pushkey xmlns:C="http://calendarserver.org/ns/"/>
+    <A:quota-available-bytes/>
+    <A:quota-used-bytes/>
+    <A:resource-id/>
+    <A:resourcetype/>
+    <A:supported-report-set/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="156" body="4433" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/" xmlns:unknown58529="http://me.com/_namespace/">
+  <D:response>
+    <D:href>/books/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:add-member></D:add-member>
+        <unknown58529:bulk-requests></unknown58529:bulk-requests>
+        <C:max-image-size></C:max-image-size>
+        <C:max-resource-size></C:max-resource-size>
+        <APPLE1:me-card></APPLE1:me-card>
+        <APPLE1:push-transports></APPLE1:push-transports>
+        <APPLE1:pushkey></APPLE1:pushkey>
+        <D:quota-available-bytes></D:quota-available-bytes>
+        <D:quota-used-bytes></D:quota-used-bytes>
+        <D:resource-id></D:resource-id>
+        <D:supported-report-set></D:supported-report-set>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop>            <D:current-user-privilege-set>
+              <D:privilege><D:read/></D:privilege><D:privilege><D:read-acl/></D:privilege><D:privilege><D:read-current-user-privilege-set/></D:privilege>
+            </D:current-user-privilege-set>
+<D:displayname>books</D:displayname>            <D:owner>
+              <D:href>/</D:href>
+            </D:owner>
+<D:resourcetype><D:collection/></D:resourcetype></D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>/books/default/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:add-member></D:add-member>
+        <unknown58529:bulk-requests></unknown58529:bulk-requests>
+        <C:max-image-size></C:max-image-size>
+        <APPLE1:me-card></APPLE1:me-card>
+        <APPLE1:push-transports></APPLE1:push-transports>
+        <APPLE1:pushkey></APPLE1:pushkey>
+        <D:quota-available-bytes></D:quota-available-bytes>
+        <D:quota-used-bytes></D:quota-used-bytes>
+        <D:resource-id></D:resource-id>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop><D:current-user-privilege-set><D:privilege><D:read/></D:privilege><D:privilege><D:write/></D:privilege><D:privilege><D:write-properties/></D:privilege><D:privilege><D:write-content/></D:privilege><D:privilege><D:read-acl/></D:privilege><D:privilege><D:read-current-user-privilege-set/></D:privilege></D:current-user-privilege-set><D:displayname>test 1</D:displayname><C:max-resource-size></C:max-resource-size>            <D:owner>
+              <D:href>/</D:href>
+            </D:owner>
+            <D:resourcetype>
+              <D:collection/>
+              <C:addressbook/>
+            </D:resourcetype>
+<D:supported-report-set><D:report><C:addressbook-multiget/></D:report></D:supported-report-set></D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>/books/second_one/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:add-member></D:add-member>
+        <unknown58529:bulk-requests></unknown58529:bulk-requests>
+        <C:max-image-size></C:max-image-size>
+        <APPLE1:me-card></APPLE1:me-card>
+        <APPLE1:push-transports></APPLE1:push-transports>
+        <APPLE1:pushkey></APPLE1:pushkey>
+        <D:quota-available-bytes></D:quota-available-bytes>
+        <D:quota-used-bytes></D:quota-used-bytes>
+        <D:resource-id></D:resource-id>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop><D:current-user-privilege-set><D:privilege><D:read/></D:privilege><D:privilege><D:write/></D:privilege><D:privilege><D:write-properties/></D:privilege><D:privilege><D:write-content/></D:privilege><D:privilege><D:read-acl/></D:privilege><D:privilege><D:read-current-user-privilege-set/></D:privilege></D:current-user-privilege-set><D:displayname>test 2</D:displayname><C:max-resource-size></C:max-resource-size>            <D:owner>
+              <D:href>/</D:href>
+            </D:owner>
+            <D:resourcetype>
+              <D:collection/>
+              <C:addressbook/>
+            </D:resourcetype>
+<D:supported-report-set><D:report><C:addressbook-multiget/></D:report></D:supported-report-set></D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/books/default/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.771+11:00" startTimeMillis="1359212203771" requestTime="2013-01-27T01:56:43.774+11:00" requestTimeMillis="1359212203774" responseTime="2013-01-27T01:56:43.789+11:00" responseTimeMillis="1359212203789" endTime="2013-01-27T01:56:43.789+11:00" endTimeMillis="1359212203789">
+<request headers="303" body="181" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <C:getctag xmlns:C="http://calendarserver.org/ns/"/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="155" body="570" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/">
+  <D:response>
+    <D:href>/books/default/</D:href>
+    <D:propstat>
+      <D:prop>            <APPLE1:getctag>
+              1359212203
+            </APPLE1:getctag>
+</D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/books/default/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.793+11:00" startTimeMillis="1359212203793" requestTime="2013-01-27T01:56:43.795+11:00" requestTimeMillis="1359212203795" responseTime="2013-01-27T01:56:43.809+11:00" responseTimeMillis="1359212203809" endTime="2013-01-27T01:56:43.809+11:00" endTimeMillis="1359212203809">
+<request headers="303" body="121" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:getetag/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="155" body="597" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/">
+  <D:response>
+    <D:href>/books/default/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:getetag></D:getetag>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>/books/default/777-999</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:getetag>713</D:getetag>
+      </D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction>
+<transaction status="Complete" method="GET" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/books/default/777-999" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:43.813+11:00" startTimeMillis="1359212203813" requestTime="2013-01-27T01:56:43.815+11:00" requestTimeMillis="1359212203815" responseTime="2013-01-27T01:56:43.838+11:00" responseTimeMillis="1359212203838" endTime="2013-01-27T01:56:43.839+11:00" endTimeMillis="1359212203839">
+<request headers="259" body="0" />
+<response status="200" headers="174" body="304" mime-type="text/html">
+<body><![CDATA[BEGIN:VCARD
+VERSION:3.0
+UID:777-999
+N:Durand;Christophe;;;
+FN:Christophe Durand
+TEL;Type=HOME;Type=pref:09 87 67 89 33
+ADR:;;3 rue du chat;Dris;;90880;FRANCE
+BDAY:1900-01-01
+PHOTO;VALUE=url;TYPE=PNG:http://en.wikipedia.org/wiki/File:PNG_transparency_demonstration_1.png
+X-YAGO-ID:un dromadaire
+END:VCARD
+]]></body></response></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/books/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:45.416+11:00" startTimeMillis="1359212205416" requestTime="2013-01-27T01:56:45.459+11:00" requestTimeMillis="1359212205459" responseTime="2013-01-27T01:56:45.592+11:00" responseTimeMillis="1359212205592" endTime="2013-01-27T01:56:45.593+11:00" endTimeMillis="1359212205593">
+<request headers="295" body="717" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:add-member/>
+    <D:bulk-requests xmlns:D="http://me.com/_namespace/"/>
+    <A:current-user-privilege-set/>
+    <A:displayname/>
+    <B:max-image-size xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <B:max-resource-size xmlns:B="urn:ietf:params:xml:ns:carddav"/>
+    <C:me-card xmlns:C="http://calendarserver.org/ns/"/>
+    <A:owner/>
+    <C:push-transports xmlns:C="http://calendarserver.org/ns/"/>
+    <C:pushkey xmlns:C="http://calendarserver.org/ns/"/>
+    <A:quota-available-bytes/>
+    <A:quota-used-bytes/>
+    <A:resource-id/>
+    <A:resourcetype/>
+    <A:supported-report-set/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="156" body="4433" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/" xmlns:unknown54724="http://me.com/_namespace/">
+  <D:response>
+    <D:href>/books/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:add-member></D:add-member>
+        <unknown54724:bulk-requests></unknown54724:bulk-requests>
+        <C:max-image-size></C:max-image-size>
+        <C:max-resource-size></C:max-resource-size>
+        <APPLE1:me-card></APPLE1:me-card>
+        <APPLE1:push-transports></APPLE1:push-transports>
+        <APPLE1:pushkey></APPLE1:pushkey>
+        <D:quota-available-bytes></D:quota-available-bytes>
+        <D:quota-used-bytes></D:quota-used-bytes>
+        <D:resource-id></D:resource-id>
+        <D:supported-report-set></D:supported-report-set>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop>            <D:current-user-privilege-set>
+              <D:privilege><D:read/></D:privilege><D:privilege><D:read-acl/></D:privilege><D:privilege><D:read-current-user-privilege-set/></D:privilege>
+            </D:current-user-privilege-set>
+<D:displayname>books</D:displayname>            <D:owner>
+              <D:href>/</D:href>
+            </D:owner>
+<D:resourcetype><D:collection/></D:resourcetype></D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>/books/default/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:add-member></D:add-member>
+        <unknown54724:bulk-requests></unknown54724:bulk-requests>
+        <C:max-image-size></C:max-image-size>
+        <APPLE1:me-card></APPLE1:me-card>
+        <APPLE1:push-transports></APPLE1:push-transports>
+        <APPLE1:pushkey></APPLE1:pushkey>
+        <D:quota-available-bytes></D:quota-available-bytes>
+        <D:quota-used-bytes></D:quota-used-bytes>
+        <D:resource-id></D:resource-id>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop><D:current-user-privilege-set><D:privilege><D:read/></D:privilege><D:privilege><D:write/></D:privilege><D:privilege><D:write-properties/></D:privilege><D:privilege><D:write-content/></D:privilege><D:privilege><D:read-acl/></D:privilege><D:privilege><D:read-current-user-privilege-set/></D:privilege></D:current-user-privilege-set><D:displayname>test 1</D:displayname><C:max-resource-size></C:max-resource-size>            <D:owner>
+              <D:href>/</D:href>
+            </D:owner>
+            <D:resourcetype>
+              <D:collection/>
+              <C:addressbook/>
+            </D:resourcetype>
+<D:supported-report-set><D:report><C:addressbook-multiget/></D:report></D:supported-report-set></D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>/books/second_one/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:add-member></D:add-member>
+        <unknown54724:bulk-requests></unknown54724:bulk-requests>
+        <C:max-image-size></C:max-image-size>
+        <APPLE1:me-card></APPLE1:me-card>
+        <APPLE1:push-transports></APPLE1:push-transports>
+        <APPLE1:pushkey></APPLE1:pushkey>
+        <D:quota-available-bytes></D:quota-available-bytes>
+        <D:quota-used-bytes></D:quota-used-bytes>
+        <D:resource-id></D:resource-id>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop><D:current-user-privilege-set><D:privilege><D:read/></D:privilege><D:privilege><D:write/></D:privilege><D:privilege><D:write-properties/></D:privilege><D:privilege><D:write-content/></D:privilege><D:privilege><D:read-acl/></D:privilege><D:privilege><D:read-current-user-privilege-set/></D:privilege></D:current-user-privilege-set><D:displayname>test 2</D:displayname><C:max-resource-size></C:max-resource-size>            <D:owner>
+              <D:href>/</D:href>
+            </D:owner>
+            <D:resourcetype>
+              <D:collection/>
+              <C:addressbook/>
+            </D:resourcetype>
+<D:supported-report-set><D:report><C:addressbook-multiget/></D:report></D:supported-report-set></D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/books/default/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:45.614+11:00" startTimeMillis="1359212205614" requestTime="2013-01-27T01:56:45.616+11:00" requestTimeMillis="1359212205616" responseTime="2013-01-27T01:56:45.644+11:00" responseTimeMillis="1359212205644" endTime="2013-01-27T01:56:45.645+11:00" endTimeMillis="1359212205645">
+<request headers="303" body="181" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <C:getctag xmlns:C="http://calendarserver.org/ns/"/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="155" body="570" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/">
+  <D:response>
+    <D:href>/books/default/</D:href>
+    <D:propstat>
+      <D:prop>            <APPLE1:getctag>
+              1359212205
+            </APPLE1:getctag>
+</D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop>
+        <D:sync-token></D:sync-token>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction>
+<transaction status="Complete" method="PROPFIND" protocolVersion="HTTP/1.1" protocol="https" host="soundcloud.dev" actualPort="443" path="/books/default/" remoteAddress="soundcloud.dev/127.0.0.1" clientAddress="/127.0.0.1" startTime="2013-01-27T01:56:45.648+11:00" startTimeMillis="1359212205648" requestTime="2013-01-27T01:56:45.651+11:00" requestTimeMillis="1359212205651" responseTime="2013-01-27T01:56:45.667+11:00" responseTimeMillis="1359212205667" endTime="2013-01-27T01:56:45.667+11:00" endTimeMillis="1359212205667">
+<request headers="303" body="121" mime-type="text/xml">
+<body><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:getetag/>
+  </A:prop>
+</A:propfind>
+]]></body></request>
+<response status="207" headers="155" body="597" mime-type="text/xml" charset="utf-8">
+<body><![CDATA[<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:carddav" xmlns:APPLE1="http://calendarserver.org/ns/">
+  <D:response>
+    <D:href>/books/default/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:getetag></D:getetag>
+      </D:prop>
+      <D:status>HTTP/1.0 501 Not Implemented</D:status>
+    </D:propstat>
+  </D:response>
+  <D:response>
+    <D:href>/books/default/777-999</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:getetag>713</D:getetag>
+      </D:prop>
+      <D:status>HTTP/1.0 200 OK</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>
+]]></body></response></transaction></charles-session>
