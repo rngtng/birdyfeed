@@ -1,8 +1,8 @@
 module CardDav
   class ContactsController < CardDavController
 
-    before_filter :load_book
-    before_filter :load_contact, :only => [:show, :update, :delete]
+    # before_filter :load_book
+    # before_filter :load_contact, :only => [:show, :update, :delete]
 
     def index
       @contacts = @book.contacts

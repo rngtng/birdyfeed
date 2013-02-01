@@ -13,6 +13,30 @@ require 'rspec/rails'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+module Rack
+  module Test
+
+    class Session
+      def propfind(uri, params = {}, env = {}, &block)
+        env = env_for(uri, env.merge(:method => "PROPFIND", :params => params))
+        process_request(uri, env, &block)
+      end
+    end
+
+    module Methods
+      def propfind(uri, params = {}, env = {}, &block)
+        current_session.propfind(uri, params, env, &block)
+      end
+    end
+
+  end
+end
+
+module AcceptanceHelper
+  include Rack::Test::Methods
+
+end
+
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 

@@ -7,7 +7,7 @@ module ActionDispatch::Routing
       options[:format] = false
       resources.push(options)
       _card_dav_resources(*resources, &block)
-      # CANONICAL_ACTIONS.delete("propfind")
+      # CANONICAL_ACTIONS.delete("propfind") # fails for nested attempt
       # CANONICAL_ACTIONS.delete("options")
     end
 
@@ -24,17 +24,18 @@ module ActionDispatch::Routing
         # concerns(opts[:concerns]) if opts[:concerns]
 
         collection do
-          get  :index
+          get :index
+          map_method :propfind, :index_propfind
+          map_method :options, :options
           post :create
         end if parent_resource.actions.include?(:create)
 
         member do
           get :show
-          options :options
-          propfind :propfind
+          map_method :propfind, :show_propfind
+          map_method :options, :options
           if parent_resource.actions.include?(:update)
-            # patch :update
-            put   :update
+            put :update
           end
           delete :destroy if parent_resource.actions.include?(:destroy)
         end
