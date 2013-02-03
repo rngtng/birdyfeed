@@ -56,9 +56,16 @@ Birdyfeed::Application.routes.draw do
   # ## END MacOSX 10.6 hacks
 
   namespace "card_dav", :path => '' do
-    match '/' => redirect('/principals/'), :via => [:propfind, :options]
+    match "/.well-known/carddav" => redirect('/')
 
-    webdav_resources :principals, :format => false, :except => [:new, :edit]
+    root :to => redirect('/principals/')
+    # , :via => [:propfind, :options]
+
+    webdav_resources :principals, :format => false, :only => [:index, :show] do
+      webdav_resources :books, :format => false, :only => [:index, :show] do
+        webdav_resources :contacts, :format => false, :except => [:new, :edit]
+      end
+    end
 
     # card_dav_resources :principals
 
@@ -66,41 +73,6 @@ Birdyfeed::Application.routes.draw do
     #   card_dav_resources :contacts
     # end
   end
-
-  # root :to => DAV4Rack::Carddav.app
-  # match '/books', :to => DAV4Rack::Carddav.app
-
-  # # TODO: Refactor these…
-  # constraints(ForceHTTPAuthConstraint) do
-  #   match '/carddav/', :to => DAV4Rack::Handler.new(
-  #     :root => '/carddav',
-  #     :root_uri_path => '/carddav',
-  #     :resource_class => Carddav::PrincipalResource,
-  #     :controller_class => Carddav::BaseController
-  #   )
-
-  #   match '/book/:book_id/:card_id', :to => DAV4Rack::Handler.new(
-  #     :root => '/book',
-  #     :root_uri_path => '/book',
-  #     :resource_class => Carddav::ContactResource,
-  #     :controller_class => Carddav::BaseController
-  #   )
-
-  #   match '/book/:book_id', :to => DAV4Rack::Handler.new(
-  #     :root => '/book',
-  #     :root_uri_path => '/book',
-  #     :resource_class => Carddav::AddressBookResource,
-  #     :controller_class => Carddav::AddressBookController
-  #   )
-
-  #   match '/book/', :to => DAV4Rack::Handler.new(
-  #     :root => '/book',
-  #     :root_uri_path => '/book',
-  #     :resource_class => Carddav::AddressBookCollectionResource,
-  #     :controller_class => Carddav::BaseController
-  #   )
-  # end
-
 
   # match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
