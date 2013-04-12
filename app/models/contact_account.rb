@@ -20,12 +20,15 @@ class ContactAccount < Account
     end
   end
 
-
   def export(path, content)
     self.client.start do |connection|
-      connection.put_string(path, content)
+      self.contacts.each do |contact|
+        connection.put_string(path, contacts.vcard)
+      end
     end
   end
+
+  protected
   def import_item(uid, content, created_at = nil, updated_at = nil)
     self.contacts.find_or_initialize_by_uid(uid).tap do |contact|
       if updated_at.to_i > contact.updated_at.to_i
