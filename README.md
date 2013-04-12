@@ -24,3 +24,19 @@ rails carddav: https://github.com/inferiorhumanorgans/meishi
   * pull down dav changes & put them into DB
 
   * add type to account -> sabredav/davical or calendar/adressbook
+
+
+
+## DS
+User has multiple Accounts
+Account can be contacts or events
+
+- contacts account has many contacs
+ - a contact
+   - belongs to one or many tags
+   - has a picture
+   - has vcard data
+
+
+- events account has many events
+ - a event

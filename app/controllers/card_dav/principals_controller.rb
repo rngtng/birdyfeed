@@ -1,13 +1,9 @@
 module CardDav
   class PrincipalsController < CardDavController
     enable_webdav_for :index,
-      :accept => :xml,
-      :format => :xml,
       :collection => true
 
     enable_webdav_for :show,
-      :accept => :xml,
-      :format => :xml,
       :collection => true
 
     def index
@@ -15,10 +11,12 @@ module CardDav
     end
 
     def show
+      params["propfind"] ||= {"xmlns"=>"DAV:", "allprop"=>nil}
+
       respond_to do |format|
         format.webdav do |dav|
           # @foos.each |foo|
-          dav.subresource "/principals/#{@current_username}/books/1"
+          dav.subresource card_dav_principal_book_url(@current_username, "default")
 
           # end
           dav.format :xml, :size => 1, :updated_at => Time.now, :current_user_principal => @current_username

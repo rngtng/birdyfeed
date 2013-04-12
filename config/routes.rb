@@ -58,7 +58,7 @@ Birdyfeed::Application.routes.draw do
   namespace "card_dav", :path => '' do
     match "/.well-known/carddav" => redirect('/')
 
-    root :to => redirect('/principals/')
+    root :to => 'principals#index'
     # , :via => [:propfind, :options]
 
     webdav_resources :principals, :format => false, :only => [:index, :show] do
