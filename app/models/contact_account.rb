@@ -1,32 +1,5 @@
-
 class ContactAccount < Account
-
   has_many :contacts
-
-  def import(max_items)
-    # self.contacts.delete_all
-
-    items = 0
-    self.client.start do |connection|
-      connection.find('.') do |item|
-        filename   = File.basename(item.url.to_s)
-        # debugger
-        updated_at = item.properties.lastmodificationdate
-        created_at = item.properties.creationdate rescue updated_at
-        import_item("#{filename}-#{id}", item.content, created_at, updated_at)
-        items += 1
-        return if items > max_items
-      end
-    end
-  end
-
-  def export(path, content)
-    self.client.start do |connection|
-      self.contacts.each do |contact|
-        connection.put_string(path, contacts.vcard)
-      end
-    end
-  end
 
   protected
   def import_item(uid, content, created_at = nil, updated_at = nil)

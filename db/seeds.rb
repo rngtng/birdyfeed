@@ -2,25 +2,21 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 
-## Davical
-# Travel
-ContactAccount.create(
-  :url => "http://davical.warteschlange.de:8081/caldav.php/travel/addressbook/",
-  :username => 'tobi',
-  :password => 'snd'
-)
+seeds = [
+  [ ContactDavImportAccount,   1, "http://davical.warteschlange.de:8081/caldav.php/travel/addressbook/", 'tobi', 'snd' ],
+  [ ContactDavImportAccount,   2, "http://davical.warteschlange.de:8081/caldav.php/tobi/addressbook/",   'tobi', 'snd' ],
+  [ ContactDavImportAccount,   3, "https://dav.warteschlange.de:8443/addressbooks/tobi/private/",        'tobi', 'snd' ],
+  [ ContactDavImportAccount,   4, "http://b.warteschlange.de/card.php/addressbooks/tobi/default/",       'tobi', 'snd' ],
 
-# Tobi
-ContactAccount.create(
-  :url => "http://davical.warteschlange.de:8081/caldav.php/tobi/addressbook/",
-  :username => 'tobi',
-  :password => 'snd'
-)
+  [ ContactFileImportAccount, 10, "/Users/tobi/Projects/ruby/birdyfeed/spec/fixtures/private.vcf" ],
+  [ ContactFileImportAccount, 11, "/Users/tobi/Projects/ruby/birdyfeed/spec/fixtures/private" ],
+  [ ContactFileImportAccount, 12, "/Users/tobi/Projects/ruby/birdyfeed/spec/fixtures/all.vcf"],
+]
 
-## Sabredav
-# Tobi
-ContactAccount.create(
-  :url => "https://dav.warteschlange.de:8443",
-  :username => 'tobi',
-  :password => 'snd'
-)
+seeds.each do |klass, id, url, username=nil, password=nil|
+  klass.find_or_initialize_by_id(id).tap do |contact|
+    contact.url      = url
+    contact.username = username
+    contact.password = password
+  end.save!
+end

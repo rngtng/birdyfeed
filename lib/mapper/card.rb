@@ -6,7 +6,7 @@ module Mapper
     FACEBOOK_URL = /facebook.com\/((profile.php\?id=(\d+))|(.+))/
 
     def initialize(card_string)
-      @card = Vcard::Vcard.decode(card_string.force_encoding('ASCII-8BIT')).first
+      @card = Vcard::Vcard.decode(card_string).first
     end
 
     def first_name
